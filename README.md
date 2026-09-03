@@ -1,4 +1,4 @@
-#WebInfoTech Home Services — Block (FSE) Theme
+#Web Info Tech Home Services — Block (FSE) Theme
 
 This is a rebuild of the original React-in-WordPress theme as a genuine
 **block theme**. Every section is now real block markup you can edit in
