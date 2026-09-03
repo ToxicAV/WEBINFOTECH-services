@@ -1,4 +1,4 @@
-# Meridian Home Services — Block (FSE) Theme
+#WebInfoTech Home Services — Block (FSE) Theme
 
 This is a rebuild of the original React-in-WordPress theme as a genuine
 **block theme**. Every section is now real block markup you can edit in
@@ -22,7 +22,7 @@ replaces that with:
   `how-it-works.php`, `cta.php`. Open any of these in the Site Editor and
   every heading, paragraph, stat, and button is a normal block.
 - **`blocks/estimator/`** — a real custom **interactive** block
-  ("Meridian: Estimator") for the instant quote tool. It's a *dynamic*
+  ("WebInfoTech: Estimator") for the instant quote tool. It's a *dynamic*
   block: `render.php` outputs the markup and `view.js` (plain JavaScript,
   no React, no build step) drives the live price calculation — the same
   formula as the original (`base price × scope multiplier × ZIP factor`).
@@ -53,9 +53,9 @@ replaces that with:
 
 ## Installing
 
-1. Zip this `meridian-home-services` folder.
+1. Zip this `WebInfoTech-home-services` folder.
 2. WordPress admin → **Appearance → Themes → Add New → Upload Theme**.
-3. Activate **Meridian Home Services**.
+3. Activate **WebInfoTech Home Services**.
 4. Go to **Appearance → Editor** to edit any section, or click
    **Edit** directly on the front end.
 
