@@ -1,6 +1,6 @@
 <?php
 /**
- * WebInfoTech Home Services — block theme functions.
+ * Web Info Tech Home Services — block theme functions.
  *
  * This theme is a genuine WordPress block (FSE) theme: templates and parts
  * are HTML block markup (templates/, parts/), sections are editable block
