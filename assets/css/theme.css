@@ -1,0 +1,191 @@
+/* ==========================================================================
+   Meridian theme support CSS
+   theme.json handles colors/typography; this file covers the decorative
+   background textures, the sticky header, and small interactive touches
+   that native block settings can't express.
+   ========================================================================== */
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* ---- Sticky header ---- */
+.meridian-header {
+	position: sticky;
+	top: 0;
+	z-index: 40;
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(8px);
+	border-bottom: 1px solid var(--wp--preset--color--line);
+}
+
+.meridian-header .wp-block-navigation {
+	--wp--style--root--padding: 0;
+}
+
+.meridian-header .wp-block-search__input {
+	background: var(--wp--preset--color--canvas) !important;
+	border-color: var(--wp--preset--color--line) !important;
+}
+
+/* ---- Decorative section backgrounds (grid texture + glow blobs) ---- */
+.meridian-decor {
+	position: relative;
+	overflow: hidden;
+}
+
+.meridian-decor::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background-image: linear-gradient(currentColor 1px, transparent 1px),
+		linear-gradient(90deg, currentColor 1px, transparent 1px);
+	background-size: 36px 36px;
+	opacity: 0.045;
+	color: var(--wp--preset--color--ink);
+}
+
+.meridian-decor.is-dark::before {
+	color: #ffffff;
+}
+
+.meridian-glow {
+	position: absolute;
+	border-radius: 9999px;
+	filter: blur(64px);
+	pointer-events: none;
+	z-index: 0;
+}
+
+.meridian-glow.brass {
+	background: color-mix(in srgb, var(--wp--preset--color--brass) 18%, transparent);
+}
+
+.meridian-glow.teal {
+	background: color-mix(in srgb, var(--wp--preset--color--teal) 18%, transparent);
+}
+
+.meridian-decor > .wp-block-group,
+.meridian-decor > .wp-block-columns {
+	position: relative;
+	z-index: 1;
+}
+
+/* ---- Badge / pill ---- */
+.meridian-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.4rem 0.85rem;
+	border-radius: 9999px;
+	border: 1px solid var(--wp--preset--color--line);
+	background: var(--wp--preset--color--panel);
+	font-size: 0.8125rem;
+	font-weight: 500;
+	color: var(--wp--preset--color--ink-faint);
+}
+
+.meridian-badge.on-dark {
+	border-color: rgba(255, 255, 255, 0.12);
+	background: rgba(255, 255, 255, 0.05);
+	color: rgba(237, 239, 235, 0.75);
+}
+
+.meridian-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 9999px;
+	background: var(--wp--preset--color--teal);
+	display: inline-block;
+	animation: meridian-pulse 2s ease-in-out infinite;
+}
+
+@keyframes meridian-pulse {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0.35; }
+}
+
+@keyframes meridian-float {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(-8px); }
+}
+
+.meridian-float {
+	animation: meridian-float 4s ease-in-out infinite;
+}
+
+/* ---- Stat / step / category cards ---- */
+.meridian-card {
+	border-radius: 1rem;
+	border: 1px solid var(--wp--preset--color--line);
+	background: var(--wp--preset--color--panel);
+	padding: 1.25rem;
+	transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.meridian-card:hover {
+	transform: translateY(-3px);
+	border-color: var(--wp--preset--color--teal);
+}
+
+.meridian-stat-value {
+	font-family: var(--wp--preset--font-family--display);
+	font-weight: 800;
+	font-size: 1.75rem;
+}
+
+/* ---- Footer watermark ---- */
+.meridian-watermark {
+	font-family: var(--wp--preset--font-family--display);
+	font-weight: 800;
+	font-size: 13vw;
+	line-height: 0.75;
+	letter-spacing: -0.06em;
+	text-align: center;
+	color: rgba(237, 239, 235, 0.06);
+	white-space: nowrap;
+	user-select: none;
+	pointer-events: none;
+	margin: 0;
+	padding-bottom: 0.5rem;
+}
+
+/* ---- Trust / feature checklist ---- */
+.meridian-check-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem 2rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 0.8125rem;
+}
+
+.meridian-check-list li {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.meridian-check-list li::before {
+	content: "✓";
+	color: var(--wp--preset--color--teal);
+	font-weight: 700;
+}
+
+/* Responsive helper matching the original container padding */
+.meridian-decor .wp-block-group,
+.wp-block-group.meridian-decor {
+	padding-left: max(1.5rem, env(safe-area-inset-left));
+	padding-right: max(1.5rem, env(safe-area-inset-right));
+}

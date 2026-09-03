@@ -1,0 +1,283 @@
+.meridian-estimator__card {
+	border-radius: 1.25rem;
+	border: 1px solid var(--wp--preset--color--line, #D8DAD3);
+	background: var(--wp--preset--color--canvas, #EDEFEB);
+	padding: 1.5rem;
+	box-shadow: 0 1px 0 0 rgba(27, 36, 48, 0.06);
+}
+
+.meridian-estimator__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 1.75rem;
+}
+
+.meridian-estimator__eyebrow {
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	color: var(--wp--preset--color--ink-faint, #5B6572);
+	margin: 0;
+}
+
+.meridian-estimator__title {
+	font-family: var(--wp--preset--font-family--display, "Archivo", sans-serif);
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin: 0.25rem 0 0;
+}
+
+.meridian-estimator__fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.meridian-estimator__fieldset legend {
+	font-size: 0.875rem;
+	font-weight: 600;
+	margin-bottom: 0.75rem;
+	padding: 0;
+}
+
+.meridian-estimator__chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.meridian-estimator__chip {
+	padding: 0.6rem 0.9rem;
+	border-radius: 0.75rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+	border: 1px solid var(--wp--preset--color--line, #D8DAD3);
+	background: var(--wp--preset--color--panel, #fff);
+	color: var(--wp--preset--color--ink-soft, #2C3644);
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.meridian-estimator__chip.is-active {
+	background: var(--wp--preset--color--ink, #1B2430);
+	color: var(--wp--preset--color--canvas, #EDEFEB);
+	border-color: var(--wp--preset--color--ink, #1B2430);
+}
+
+.meridian-estimator__chip:hover:not(.is-active) {
+	border-color: var(--wp--preset--color--ink-faint, #5B6572);
+	transform: translateY(-1px);
+}
+
+.meridian-estimator__scopes {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0.75rem;
+}
+
+@media (max-width: 640px) {
+	.meridian-estimator__scopes {
+		grid-template-columns: 1fr;
+	}
+}
+
+.meridian-estimator__scope {
+	text-align: left;
+	padding: 1rem;
+	border-radius: 0.75rem;
+	border: 1px solid var(--wp--preset--color--line, #D8DAD3);
+	background: var(--wp--preset--color--panel, #fff);
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	gap: 0.15rem;
+	transition: all 0.25s ease;
+}
+
+.meridian-estimator__scope.is-active {
+	border-color: var(--wp--preset--color--teal, #1F5C52);
+	background: color-mix(in srgb, var(--wp--preset--color--teal, #1F5C52) 6%, transparent);
+	transform: translateY(-2px);
+}
+
+.meridian-estimator__scope-icon {
+	font-size: 1.25rem;
+}
+
+.meridian-estimator__scope-label {
+	font-size: 0.875rem;
+	font-weight: 700;
+	margin-top: 0.5rem;
+}
+
+.meridian-estimator__scope-hint {
+	font-size: 0.75rem;
+	color: var(--wp--preset--color--ink-faint, #5B6572);
+}
+
+.meridian-estimator__scope-mult {
+	font-size: 0.75rem;
+	font-weight: 600;
+	color: var(--wp--preset--color--teal, #1F5C52);
+	margin-top: 0.4rem;
+}
+
+.meridian-estimator__zip-label {
+	display: block;
+	margin-top: 1.75rem;
+}
+
+.meridian-estimator__zip-label > span {
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 600;
+	margin-bottom: 0.6rem;
+}
+
+.meridian-estimator__zip-input {
+	width: 100%;
+	max-width: 18rem;
+	padding: 0.75rem 0.9rem;
+	font-size: 0.875rem;
+	border-radius: 0.75rem;
+	border: 1px solid var(--wp--preset--color--line, #D8DAD3);
+	background: var(--wp--preset--color--panel, #fff);
+	outline: none;
+}
+
+.meridian-estimator__zip-input:focus {
+	border-color: var(--wp--preset--color--teal, #1F5C52);
+}
+
+.meridian-estimator__result {
+	margin-top: 2rem;
+	border-radius: 1rem;
+	background: var(--wp--preset--color--ink, #1B2430);
+	color: var(--wp--preset--color--canvas, #EDEFEB);
+	padding: 1.5rem;
+}
+
+.meridian-estimator__result-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.meridian-estimator__result-eyebrow {
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	opacity: 0.5;
+	margin: 0;
+}
+
+.meridian-estimator__result-sub {
+	font-size: 0.875rem;
+	opacity: 0.7;
+	margin: 0.25rem 0 0;
+}
+
+.meridian-estimator__result-tag {
+	padding: 0.25rem 0.6rem;
+	border-radius: 9999px;
+	background: color-mix(in srgb, var(--wp--preset--color--teal, #1F5C52) 20%, transparent);
+	color: var(--wp--preset--color--teal-light, #3D8578);
+	font-size: 0.625rem;
+	font-weight: 700;
+}
+
+.meridian-estimator__price {
+	font-family: var(--wp--preset--font-family--display, "Archivo", sans-serif);
+	font-weight: 800;
+	font-size: 2.5rem;
+	margin-top: 1rem;
+}
+
+.meridian-estimator__price span {
+	font-family: var(--wp--preset--font-family--body, "IBM Plex Sans", sans-serif);
+	font-weight: 400;
+	font-size: 1.5rem;
+	opacity: 0.4;
+}
+
+.meridian-estimator__confidence {
+	margin-top: 1.25rem;
+}
+
+.meridian-estimator__confidence-row {
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.75rem;
+	opacity: 0.75;
+	margin-bottom: 0.5rem;
+}
+
+.meridian-estimator__confidence-bar {
+	height: 6px;
+	border-radius: 9999px;
+	background: rgba(255, 255, 255, 0.1);
+	overflow: hidden;
+}
+
+.meridian-estimator__confidence-fill {
+	height: 100%;
+	background: var(--wp--preset--color--teal, #1F5C52);
+	border-radius: 9999px;
+	transition: width 0.5s ease;
+}
+
+.meridian-estimator__next {
+	margin-top: 1.25rem;
+	font-size: 0.875rem;
+	opacity: 0.75;
+}
+
+.meridian-estimator__submit {
+	width: 100%;
+	margin-top: 1.25rem;
+	padding: 0.9rem 1.25rem;
+	border-radius: 0.75rem;
+	border: none;
+	background: var(--wp--preset--color--brass, #C98A34);
+	color: var(--wp--preset--color--ink, #1B2430);
+	font-weight: 700;
+	font-size: 0.9375rem;
+	cursor: pointer;
+	transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.meridian-estimator__submit:hover {
+	background: var(--wp--preset--color--brass-dark, #A66E24);
+	transform: translateY(-1px);
+}
+
+.meridian-estimator__success {
+	margin-top: 1rem;
+	padding: 0.9rem;
+	text-align: center;
+	border-radius: 0.75rem;
+	background: color-mix(in srgb, var(--wp--preset--color--teal, #1F5C52) 6%, transparent);
+	border: 1px solid color-mix(in srgb, var(--wp--preset--color--teal, #1F5C52) 15%, transparent);
+}
+
+.meridian-estimator__success p:first-child {
+	font-weight: 600;
+	color: var(--wp--preset--color--teal, #1F5C52);
+	margin: 0;
+}
+
+.meridian-estimator__success p:last-child {
+	font-size: 0.8125rem;
+	color: var(--wp--preset--color--ink-faint, #5B6572);
+	margin: 0.25rem 0 0;
+}
+
+.meridian-estimator-placeholder {
+	padding: 2rem;
+	text-align: center;
+	border: 1px dashed var(--wp--preset--color--line, #D8DAD3);
+	border-radius: 1rem;
+	color: var(--wp--preset--color--ink-faint, #5B6572);
+	font-size: 0.875rem;
+}

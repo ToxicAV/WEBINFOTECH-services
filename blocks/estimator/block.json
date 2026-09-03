@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "meridian/estimator",
+	"title": "Meridian: Estimator",
+	"category": "meridian",
+	"icon": "calculator",
+	"description": "Interactive instant-quote tool: pick a service, project size and ZIP code to see a live price range. Insert, move, or remove like any other block.",
+	"keywords": [ "quote", "estimate", "pricing", "calculator" ],
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ]
+	},
+	"textdomain": "meridian-home-services",
+	"editorScript": "file:./index.js",
+	"style": "file:./style.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}
